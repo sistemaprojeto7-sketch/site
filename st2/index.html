@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InovaFlow - Automação & IA</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #000;
+      color: #eee;
+    }
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      z-index: 1000;
+    }
+    header img {
+      height: 50px;
+    }
+    nav a {
+      color: #eee;
+      text-decoration: none;
+      margin-left: 25px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #00ff99;
+    }
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 120px 40px 60px;
+      background: url('https://static.vecteezy.com/system/resources/thumbnails/010/870/032/original/futuristic-digital-rain-background-matrix-style-binary-code-animation-cyber-technology-concept-video.jpg') no-repeat center center/cover;
+      min-height: 100vh;
+    }
+    .hero-text {
+      max-width: 50%;
+    }
+    .hero-text h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #00ff99;
+    }
+    .hero-text p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+    .btn {
+      background: linear-gradient(90deg, gold, #00ff99);
+      border: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      color: #000;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .btn:hover {
+      transform: scale(1.05);
+    }
+    .hero img {
+      max-width: 350px;
+      border-radius: 15px;
+      border: 2px solid #00ff99;
+      box-shadow: 0 0 20px #00ff99;
+    }
+    section {
+      padding: 80px 40px;
+    }
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: gold;
+      text-align: center;
+    }
+    section p {
+      max-width: 800px;
+      margin: 0 auto 30px;
+      text-align: center;
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+    .project-card {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 20px;
+      border-radius: 10px;
+      border: 1px solid #00ff99;
+      transition: transform 0.2s;
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+    .contact {
+      text-align: center;
+    }
+    .contact a {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 20px;
+      background: #00ff99;
+      color: #000;
+      border-radius: 6px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .contact a:hover {
+      background: gold;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #111;
+      border-top: 1px solid #00ff99;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="InovaFlow Logo">
+    <nav>
+      <a href="#about">Sobre</a>
+      <a href="#projects">Projetos</a>
+      <a href="#contact">Contato</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Eduardo | InovaFlow</h1>
+      <p>Transformando logística, indústria e pequenos negócios com automação inteligente, sistemas práticos e inovação com IA.</p>
+      <button class="btn">Conectar no LinkedIn</button>
+    </div>
+    <img src="minhafoto.png" alt="Eduardo">
+  </section>
+
+  <section id="about">
+    <h2>Sobre mim</h2>
+    <p>Sou especialista em automação de processos, inovação com IA e transformação digital.  
+    Atuei em 18 Centros de Distribuição, liderando projetos que otimizaram operações, reduziram custos e aumentaram a produtividade em larga escala.  
+    Meu propósito é simplificar a tecnologia para que empresas de todos os portes tenham resultados práticos e eficazes.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Projetos & Automações</h2>
+    <p>Confira algumas das principais automações que desenvolvo, aplicáveis em logística, indústria e negócios de qualquer porte:</p>
+    <div class="projects">
+      <div class="project-card">📦 Automação de Notas Fiscais no WMS</div>
+      <div class="project-card">🚚 Otimização de Rotas e Fretes</div>
+      <div class="project-card">🤖 Robôs para Processos Repetitivos (RPA)</div>
+      <div class="project-card">📊 Dashboards inteligentes com IA</div>
+      <div class="project-card">📧 Leitura automática de e-mails e integração</div>
+      <div class="project-card">🏭 Controle de Produção com IoT</div>
+      <div class="project-card">💰 Automação de Custos e Estoques</div>
+      <div class="project-card">📱 Chatbots para atendimento e suporte</div>
+      <div class="project-card">🔗 Integração entre sistemas ERP/WMS</div>
+      <div class="project-card">⚡ Workflows para pequenos negócios</div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contato</h2>
+    <p>Vamos conversar sobre como a automação pode transformar seu negócio.</p>
+    <a href="mailto:inovaflow0@gmail.com">E-mail</a>
+    <a href="https://www.linkedin.com/in/eduardo-florim-b7915930" target="_blank">LinkedIn</a>
+  </section>
+
+  <footer>
+    <p>© 2025 InovaFlow | Desenvolvido por Eduardo</p>
+  </footer>
+</body>
+</html>
