@@ -1,17 +1,28 @@
 /* --- HERO CARD CORRIGIDO --- */
+/* --- ESTILIZAÇÃO DO CARD E TEXTOS --- */
 .hero-card {
     position: relative;
-    background-color: #151528; /* Cor de segurança caso a imagem falhe */
     background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('logistica-bg.jpg');
     background-size: cover;
     background-position: center;
     border-radius: 20px;
     overflow: hidden;
-    border: 1px solid rgba(108, 76, 255, 0.3);
+    border: 1px solid rgba(108, 76, 255, 0.4);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
     min-height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* Garanta que o seletor da lista distribuída esteja assim no CSS */
+.card-content {
+    position: relative;
+    z-index: 2;
+    padding: 30px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
 .distributed-list {
     list-style: none;
     padding: 0;
@@ -19,6 +30,46 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
+}
+
+.floating-item {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(156, 125, 255, 0.2);
+    padding: 15px 20px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: 0.3s ease;
+}
+
+.floating-item:hover {
+    transform: translateX(10px);
+    background: rgba(108, 76, 255, 0.2);
+}
+
+/* O SEGREDO DA SEPARAÇÃO DOS TEXTOS */
+.item-text {
+    display: flex;
+    flex-direction: column; /* Força um embaixo do outro */
+    align-items: flex-start;
+    text-align: left;
+}
+
+.item-text strong {
+    color: #9c7dff;
+    font-size: 1.1rem;
+    font-weight: 800;
+    display: block;
+    margin-bottom: 4px; /* Espaço entre o título roxo e a descrição */
+}
+
+.item-desc {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.2;
+    display: block;
 }
 
 :root {
@@ -207,4 +258,5 @@ body::before {
     .hero h1 { font-size: 2.5rem; }
 
 }
+
 
