@@ -473,3 +473,105 @@ footer { padding: 40px; text-align: center; opacity: 0.6; font-size: 0.8rem; }
     .hero-card { min-height: auto; padding: 20px; }
     .section-title { font-size: 1.8rem; }
 }
+
+.icon-wrapper {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(108, 76, 255, 0.1); /* Roxo bem suave ao fundo */
+    border-radius: 12px;
+    color: var(--primary); /* Usa o roxo principal nos traços do ícone */
+    transition: 0.3s;
+}
+
+.icon-wrapper svg {
+    width: 30px;
+    height: 30px;
+}
+
+.card:hover .icon-wrapper {
+    background: var(--primary);
+    color: #fff; /* Inverte a cor no hover para dar o "charme" */
+    transform: rotate(-5deg) scale(1.1); /* Leve inclinação para dar dinamismo */
+}
+
+/* --- CATÁLOGO DE ATUAÇÕES --- */
+.catalogo-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas no notebook */
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.catalogo-col {
+    background: var(--glass);
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid rgba(108, 76, 255, 0.1);
+    transition: 0.3s;
+}
+
+.catalogo-col:hover {
+    border-color: var(--primary);
+    background: rgba(108, 76, 255, 0.05);
+    transform: translateY(-5px);
+}
+
+.catalogo-header {
+    color: var(--primary);
+    font-size: 1.1rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgba(108, 76, 255, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.catalogo-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.catalogo-list li {
+    font-size: 0.9rem;
+    padding: 8px 0;
+    color: rgba(255, 255, 255, 0.8);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+}
+
+.catalogo-list li::before {
+    content: "→";
+    color: var(--primary);
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.catalogo-list li:last-child {
+    border-bottom: none;
+}
+
+/* --- RESPONSIVIDADE DO CATÁLOGO --- */
+
+/* Tablets (iPad/Notebooks pequenos) */
+@media (max-width: 1024px) {
+    .catalogo-grid {
+        grid-template-columns: repeat(2, 1fr); /* vira 2x2 */
+    }
+}
+
+/* Celulares */
+@media (max-width: 600px) {
+    .catalogo-grid {
+        grid-template-columns: 1fr; /* vira 1 coluna */
+    }
+    .catalogo-col {
+        padding: 20px;
+    }
+}
