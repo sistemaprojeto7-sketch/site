@@ -302,6 +302,56 @@
     </div>
 </section>
 
+<section id="servicos" class="services-accordion">
+    <div class="container">
+        <h2 class="section-title">Nossos Planos e <span class="highlight">Serviços</span></h2>
+        
+        <div class="accordion-container">
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    <span>Mentoria Individual - IA & Carreira</span>
+                    <span class="icon">+</span>
+                </button>
+                <div class="accordion-content">
+                    <div class="content-inner">
+                        <p>Acompanhamento 1-on-1 para arquitetura de carreira e implementação de sistemas agênticos personalizados.</p>
+                        <div class="price-tag">Investimento: <strong>R$ 2.500,00</strong></div>
+                        <a href="#contato" class="btn-service">Solicitar Proposta</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    <span>Mastermind Grupo Elite 2026</span>
+                    <span class="icon">+</span>
+                </button>
+                <div class="accordion-content">
+                    <div class="content-inner">
+                        <p>Acesso à rede exclusiva de gestores, encontros mensais e biblioteca de automações prontas para uso.</p>
+                        <div class="price-tag">Investimento: <strong>R$ 1.200,00 / anual</strong></div>
+                        <a href="#contato" class="btn-service">Garantir Vaga</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-header">
+                    <span>Consultoria Greenfield Logística</span>
+                    <span class="icon">+</span>
+                </button>
+                <div class="accordion-content">
+                    <div class="content-inner">
+                        <p>Desenvolvimento de malha logística do zero, configuração de WMS e treinamento de equipes operacionais.</p>
+                        <div class="price-tag"><strong>Sob Consulta</strong></div>
+                        <a href="#contato" class="btn-service">Falar com Consultor</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    
 <section id="contato" class="contact">
     <div class="container contact-box">
         <h2>Solicitar Diagnóstico</h2>
@@ -317,8 +367,28 @@
 </section>
 
 <footer><p>© 2026 Inteligência Pro | Academia do Analista</p></footer>
+
+<script>
+    document.querySelectorAll('.accordion-header').forEach(button => {
+        button.addEventListener('click', () => {
+            const accordionItem = button.parentElement;
+            
+            // Fecha outros que estiverem abertos (opcional)
+            document.querySelectorAll('.accordion-item').forEach(item => {
+                if (item !== accordionItem) {
+                    item.classList.remove('active');
+                }
+            });
+
+            // Abre ou fecha o atual
+            accordionItem.classList.toggle('active');
+        });
+    });
+</script>
+
 </body>
 </html>
+
 
 
 
