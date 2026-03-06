@@ -575,3 +575,45 @@ footer { padding: 40px; text-align: center; opacity: 0.6; font-size: 0.8rem; }
         padding: 20px;
     }
 }
+
+/* --- LOGOS NO RODAPÉ (REDUZIDAS) --- */
+.footer-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;          /* Espaço generoso entre as duas marcas */
+    margin-bottom: 25px;
+    flex-wrap: wrap;    /* Garante que elas quebrem linha se a tela for muito pequena */
+}
+
+.footer-logo-img {
+    height: 35px;       /* Tamanho Pequeno/Médio (antes estava maior) */
+    width: auto;
+    opacity: 0.6;       /* Fica mais discreta, integrando ao design escuro */
+    filter: grayscale(30%); /* Deixa as cores menos vibrantes para não distrair */
+    transition: 0.3s ease;
+    border-radius: 6px;
+}
+
+.footer-logo-img:hover {
+    opacity: 1;         /* Ganha destaque total ao passar o mouse */
+    filter: grayscale(0%);
+    transform: translateY(-3px);
+}
+
+/* Rodapé Texto */
+footer p {
+    font-size: 0.8rem;
+    opacity: 0.5;
+    letter-spacing: 0.5px;
+}
+
+/* AJUSTE PARA CELULAR */
+@media (max-width: 600px) {
+    .footer-logo-img {
+        height: 30px;   /* Ainda menor no celular para caber uma ao lado da outra */
+    }
+    .footer-logos {
+        gap: 20px;
+    }
+}
