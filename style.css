@@ -743,3 +743,42 @@ footer p {
     transform: rotate(45deg); /* Transforma o + em x */
     color: var(--secondary);
 }
+
+/* LINK DE DESTAQUE NA NAVEGAÇÃO SERVIÇOS */
+.nav-link-highlight {
+    color: var(--primary) !important; /* Cor roxa para dar ênfase */
+    font-weight: 800 !important;
+    position: relative;
+    padding: 5px 10px;
+    transition: 0.3s;
+}
+
+.nav-link-highlight::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 10px;
+    background-color: var(--primary);
+    transition: width 0.3s ease;
+}
+
+.nav-link-highlight:hover::after {
+    width: 70%;
+}
+
+.nav-link-highlight:hover {
+    transform: translateY(-2px);
+    text-shadow: 0 0 10px rgba(108, 76, 255, 0.4);
+}
+
+/* Ajuste para não apertar muito no Mobile */
+@media (max-width: 900px) {
+    .nav-links {
+        gap: 10px;
+    }
+    .nav-link-highlight {
+        font-size: 0.8rem;
+    }
+}
