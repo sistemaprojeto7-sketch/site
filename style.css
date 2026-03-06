@@ -576,6 +576,46 @@ footer { padding: 40px; text-align: center; opacity: 0.6; font-size: 0.8rem; }
     }
 }
 
+/* CONTAINER DA LOGO (IMAGEM + TEXTO) */
+.logo-container {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente a imagem com o texto */
+    gap: 15px;           /* Espaço entre a imagem e o texto */
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.logo-container:hover {
+    transform: scale(1.02);
+}
+
+/* AJUSTE DA IMAGEM (MAIOR) */
+.nav-logo-img {
+    height: 60px;       /* Aumentamos de 45px para 60px */
+    width: auto;
+    border-radius: 8px; /* Leve arredondamento se a imagem for quadrada */
+}
+
+/* AJUSTE DO TEXTO AO LADO */
+.logo-text {
+    font-weight: 800;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    color: #fff;
+    line-height: 1;
+}
+
+/* RESPONSIVIDADE MOBILE */
+@media (max-width: 900px) {
+    .nav-logo-img {
+        height: 45px; /* Um pouco menor no celular para não quebrar o menu */
+    }
+    .logo-text {
+        font-size: 1.1rem;
+    }
+}
+
+
 /* --- LOGOS NO RODAPÉ (REDUZIDAS) --- */
 .footer-logos {
     display: flex;
