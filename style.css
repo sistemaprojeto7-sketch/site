@@ -657,3 +657,89 @@ footer p {
         gap: 20px;
     }
 }
+
+/* --- ACCORDION DE SERVIÇOS --- */
+.accordion-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.accordion-item {
+    background: var(--glass);
+    border: 1px solid rgba(108, 76, 255, 0.2);
+    border-radius: 12px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.accordion-header {
+    width: 100%;
+    padding: 20px 25px;
+    background: none;
+    border: none;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-align: left;
+    transition: 0.3s;
+}
+
+.accordion-header:hover {
+    background: rgba(108, 76, 255, 0.1);
+}
+
+.accordion-header .icon {
+    font-size: 1.5rem;
+    color: var(--primary);
+    transition: transform 0.3s;
+}
+
+/* Conteúdo que abre e fecha */
+.accordion-content {
+    max-height: 0; /* Começa fechado */
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0, 1, 0, 1);
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.content-inner {
+    padding: 0 25px 25px 45px; /* Recuo à esquerda de 45px para organização */
+}
+
+.content-inner p {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 15px;
+}
+
+.price-tag {
+    color: #00ff88; /* Verde sucesso para o preço */
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.btn-service {
+    display: inline-block;
+    padding: 8px 18px;
+    background: var(--primary);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+/* Classe que o JavaScript vai adicionar */
+.accordion-item.active .accordion-content {
+    max-height: 500px; /* Define uma altura máxima para a animação */
+    transition: max-height 0.4s cubic-bezier(1, 0, 1, 0);
+}
+
+.accordion-item.active .icon {
+    transform: rotate(45deg); /* Transforma o + em x */
+    color: var(--secondary);
+}
