@@ -782,3 +782,84 @@ footer p {
         font-size: 0.8rem;
     }
 }
+
+/* --- CORES POR ESPECIALISTA (BORDAS LATERAIS) --- */
+
+/* 1. Rodrigo - Verde (Logística/Estratégia) */
+.accordion-item:nth-child(1) { border-left: 5px solid #00ff88; }
+
+/* 2. Diego - Rosa/Pink (Sistemas/BI) */
+.accordion-item:nth-child(2) { border-left: 5px solid #ff4cff; }
+
+/* 3. James - Azul Claro (Acadêmico/Lean) */
+.accordion-item:nth-child(3) { border-left: 5px solid #00d4ff; }
+
+/* 4. Eduardo - Roxo (Automação/IA) */
+.accordion-item:nth-child(4) { border-left: 5px solid #6c4cff; }
+
+/* 5. Time Completo - Destaque Ouro/Gradiente */
+.accordion-item:nth-child(5) { 
+    border-left: 5px solid #ffcc00; 
+    background: linear-gradient(rgba(255, 204, 0, 0.05), transparent) !important;
+}
+
+/* --- AJUSTE NO BOTÃO DE SERVIÇO --- */
+.btn-service {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 25px;
+    background: var(--primary);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.btn-service:hover {
+    background: #fff;
+    color: var(--primary);
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(108, 76, 255, 0.4);
+}
+
+
+/* --- ESTILO DOS SUB-TÓPICOS DENTRO DA ABA --- */
+.service-sub-item {
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.service-sub-item h4 {
+    color: var(--primary);
+    margin-bottom: 8px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.service-sub-item p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 8px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* DESTAQUE PARA A ÚLTIMA ABA (TIME COMPLETO) */
+.highlight-item {
+    border: 2px solid var(--primary) !important;
+    background: linear-gradient(rgba(108, 76, 255, 0.1), transparent) !important;
+}
+
+/* Recuo à esquerda para dar o ar de "catálogo" */
+.content-inner {
+    padding: 25px 30px 30px 50px; /* Recuo de 50px para organizar sub-itens */
+}
+
+/* Ajuste de altura máxima para suportar mais conteúdo */
+.accordion-item.active .accordion-content {
+    max-height: 1200px; /* Aumentado para caber os 3 sub-itens */
+}
