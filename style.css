@@ -863,3 +863,43 @@ footer p {
 .accordion-item.active .accordion-content {
     max-height: 1200px; /* Aumentado para caber os 3 sub-itens */
 }
+
+
+/* CONTAINER PARA OS LINKS DO MENTOR */
+.mentor-links {
+    display: flex;
+    gap: 20px; /* Espaço entre LinkedIn e Catálogo */
+    justify-content: center;
+    margin-top: 10px;
+}
+
+/* ESTILO DO LINK DO CATÁLOGO meu site */
+.catalog-link {
+    color: #00ff88; /* Verde Neon para destacar o portfólio */
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 700;
+    position: relative;
+    transition: 0.3s;
+}
+
+.catalog-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1.5px;
+    bottom: -2px;
+    left: 0;
+    background-color: #00ff88;
+    transition: width 0.3s ease;
+}
+
+.catalog-link:hover {
+    color: #fff;
+    text-shadow: 0 0 8px rgba(0, 255, 136, 0.5);
+}
+
+.catalog-link:hover::after {
+    width: 100%;
+    background-color: #fff;
+}
