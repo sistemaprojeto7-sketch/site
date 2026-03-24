@@ -904,31 +904,45 @@ footer p {
     background-color: #fff;
 }
 
-/* Centralização e estilo do e-mail */
+/* --- ESTILIZAÇÃO DO E-MAIL COM DESTAQUE --- */
 .contact-email-wrapper {
-    text-align: center; /* Centraliza em qualquer dispositivo */
-    margin-top: -10px;  /* Ajusta a proximidade com o título */
-    margin-bottom: 30px; /* Dá espaço para o conteúdo abaixo */
+    text-align: center;
+    margin-top: -35px;  /* Puxa para mais perto do título */
+    margin-bottom: 40px; 
+    width: 100%;
 }
 
 .contact-email {
     font-family: 'Inter', sans-serif;
-    color: var(--highlight, #00ff88); /* Usa sua cor de destaque ou uma padrão */
+    color: #ffffff; /* Cor Branca pedida */
     text-decoration: none;
     font-weight: 600;
     font-size: 1.1rem;
-    transition: opacity 0.3s ease;
+    letter-spacing: 1px;
+    padding: 5px 15px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.03); /* Fundo quase invisível */
+    border: 1px solid rgba(108, 76, 255, 0.2); /* Borda roxa bem sutil */
+    transition: all 0.4s ease;
+    display: inline-block;
 }
 
 .contact-email:hover {
-    text-decoration: underline;
-    opacity: 0.8;
+    color: #fff;
+    background: rgba(108, 76, 255, 0.1); /* Fundo roxo suave no hover */
+    border-color: var(--primary); /* Borda brilha no roxo principal */
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(108, 76, 255, 0.4); /* Efeito Glow */
+    letter-spacing: 1.5px; /* Efeito de expansão leve */
 }
 
-/* Ajuste para telas menores (Celulares) */
+/* Ajuste Responsivo para Celulares */
 @media (max-width: 768px) {
+    .contact-email-wrapper {
+        margin-top: -30px;
+    }
     .contact-email {
-        font-size: 0.95rem;
+        font-size: 0.9rem;
+        padding: 8px 12px;
     }
 }
-
