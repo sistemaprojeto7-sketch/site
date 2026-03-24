@@ -903,3 +903,32 @@ footer p {
     width: 100%;
     background-color: #fff;
 }
+
+/* Centralização e estilo do e-mail */
+.contact-email-wrapper {
+    text-align: center; /* Centraliza em qualquer dispositivo */
+    margin-top: -10px;  /* Ajusta a proximidade com o título */
+    margin-bottom: 30px; /* Dá espaço para o conteúdo abaixo */
+}
+
+.contact-email {
+    font-family: 'Inter', sans-serif;
+    color: var(--highlight, #00ff88); /* Usa sua cor de destaque ou uma padrão */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: opacity 0.3s ease;
+}
+
+.contact-email:hover {
+    text-decoration: underline;
+    opacity: 0.8;
+}
+
+/* Ajuste para telas menores (Celulares) */
+@media (max-width: 768px) {
+    .contact-email {
+        font-size: 0.95rem;
+    }
+}
+
